@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "2e329911-89a7-4af8-87c6-8659bec2ad7f",
+		"name": "Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"first_name\": \"shri\",\n        \"last_name\": \"shri\",\n        \"email_id\": \"ss@ss.com\",\n        \"password\": \"abc\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50272/User/AddUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50272",
+					"path": [
+						"User",
+						"AddUser"
+					]
+				},
+				"description": "AddUser"
+			},
+			"response": [
+				{
+					"name": "Valid AddUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"first_name\": \"shri\",\n        \"last_name\": \"shri\",\n        \"email_id\": \"s@ss.com\",\n        \"password\": \"abc\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:50272/User/AddUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50272",
+							"path": [
+								"User",
+								"AddUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcMlxQcmFjdGljZVxVc2VyTWFuYWdlbWVudFxBUElcVXNlclxBZGRVc2Vy?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2019 10:22:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"StatusCode\": 200,\n    \"StatusMessage\": \"OK\"\n}"
+				},
+				{
+					"name": "InValid AddUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"first_name\": \"shri\",\n        \"last_name\": \"shri\",\n        \"email_id\": \"s@ss.com\",\n        \"password\": \"abc\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:50272/User/AddUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50272",
+							"path": [
+								"User",
+								"AddUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcMlxQcmFjdGljZVxVc2VyTWFuYWdlbWVudFxBUElcVXNlclxBZGRVc2Vy?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2019 10:23:12 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"StatusCode\": 409,\n    \"StatusMessage\": \"Conflict\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNzQHNzLmNvbSIsIm5iZiI6MTU2NzI1MTA3NiwiZXhwIjoxNTY3MjUyODc2LCJpYXQiOjE1NjcyNTEwNzZ9.jmxZ3ROYFOD_WdtYaMxNWnzPjJ5q4u7kkLRUPiRJnIc\",\n    \"user\": {\n        \"first_name\": \"shri\",\n        \"last_name\": \"shridhar\",\n        \"email_id\":\"ss@ss.com\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50272/User/UpdateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50272",
+					"path": [
+						"User",
+						"UpdateUser"
+					]
+				},
+				"description": "AddUser"
+			},
+			"response": []
+		},
+		{
+			"name": "AuthenticateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email_id\": \"ss@ss.com\",\n    \"password\": \"abc\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50272/User/Authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50272",
+					"path": [
+						"User",
+						"Authenticate"
+					]
+				},
+				"description": "AddUser"
+			},
+			"response": [
+				{
+					"name": "AuthenticateUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_id\": \"ss@ss.com\",\n    \"password\": \"abc\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:50272/User/Authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50272",
+							"path": [
+								"User",
+								"Authenticate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcMlxQcmFjdGljZVxVc2VyTWFuYWdlbWVudFxBUElcVXNlclxBdXRoZW50aWNhdGU=?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2019 11:31:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNzQHNzLmNvbSIsIm5iZiI6MTU2NzI1MTA3NiwiZXhwIjoxNTY3MjUyODc2LCJpYXQiOjE1NjcyNTEwNzZ9.jmxZ3ROYFOD_WdtYaMxNWnzPjJ5q4u7kkLRUPiRJnIc\",\n    \"status_code\": 200,\n    \"status_message\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNzQHNzLmNvbSIsIm5iZiI6MTU2NzI1MTA3NiwiZXhwIjoxNTY3MjUyODc2LCJpYXQiOjE1NjcyNTEwNzZ9.jmxZ3ROYFOD_WdtYaMxNWnzPjJ5q4u7kkLRUPiRJnIc\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50272/User/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50272",
+					"path": [
+						"User",
+						"profile"
+					]
+				},
+				"description": "AddUser"
+			},
+			"response": []
+		}
+	]
+}
